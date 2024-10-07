@@ -3,13 +3,13 @@ import "../style/index.css";
 /**
  *  EDIT ONLY INSIDE THIS RENDER FUNCTION
  *  This function is called every time the user changes types or changes any input
- * 
+ *
     {
         includeCover: true, // if includeCover is true the algorithm should show the cover image
         background: "https://images.unsplash.com/photo-1511974035430-5de47d3b95da", // this is the image's url that will be used as a background for the profile cover
         avatarURL: "https://randomuser.me/api/portraits/women/42.jpg", // this is the url for the profile avatar
         socialMediaPosition: "right", // social media bar position (left or right)
-        
+
         twitter: null, // social media usernames
         github: null,
         linkedin: null,
@@ -34,24 +34,25 @@ function render(variables = {}) {
             ${cover}
           <img src="${variables.avatarURL}" class="photo" />
           <h1>${variables.name == null ? "Name" : variables.name} ${
-    variables.lastname == null ? "Lastname" : variables.lastname
-  }</h1>;
+    variables.lastName == null ? "Lastname" : variables.lastName
+  }</h1>
           <h2>${variables.role == null ? "Your role" : variables.role}</h2>
           <h3>${variables.city == null ? "Your city" : variables.city}, ${
     variables.country == null ? "Your country" : variables.country
   }</h3>
-          
+
+
           <ul class=${variables.socialMediaPosition}>
-            <li><a href="${
+            <li><a href="https://twitter.com/${
               variables.twitter
             }"><i class="fab fa-twitter"></i></a></li>
-            <li><a href="${
+            <li><a href="https://github.com/${
               variables.github
             }"><i class="fab fa-github"></i></a></li>
-            <li><a href="${
+            <li><a href="https://linkedin.com/${
               variables.linkedin
             }"><i class="fab fa-linkedin"></i></a></li>
-            <li><a href="${
+            <li><a href="https://instagram.com/${
               variables.instagram
             }"><i class="fab fa-instagram"></i></a></li>
           </ul>
